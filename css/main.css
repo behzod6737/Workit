@@ -92,8 +92,8 @@ img {
   width: 100%;
   max-width: 1146px;
   margin: 0 auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 /* BUTTON */
@@ -206,6 +206,64 @@ img {
 }
 .hero__img {
 	display: block;
-	width: 767;
-	height: 441;
+	width: 767px;
+	height: 441px;
+	position: relative;
+	z-index: 1;
+	top: 4rem;;
+	
 }
+
+
+@media only screen and (max-width: 768px) {
+	.site-header-hero-wrapper{
+		padding-top: 36px;
+	}
+
+	.site-header{
+		padding-bottom: 56px;
+	}
+
+	.hero__heading{
+		max-width: 465px;
+		margin-bottom: 70px;
+		font-size: 60px;
+		line-height: 80px;
+	}
+
+	.hero__img{
+		top: 5rem;
+		width: 514px;
+		height: 296px;
+	}
+}
+
+@media only screen and (max-width: 583px) {
+	.hero__img{
+		top: 3rem;
+		width: 400px;
+		height: 200px;
+	}
+}
+@media only screen and (max-width:448px ) {
+	.container{
+		padding-left:16px ;
+		padding-right: 16px;
+	}
+	.hero__heading{
+		max-width: 343px;
+		margin-bottom: 40px;
+		font-size: 50px;
+		line-height: 70px;
+	}
+	.hero__button{
+		padding: 12px 23px;
+	}
+	
+	.hero__img{
+		top: 2rem;
+		width: 300px;
+		height: 200px;
+	}
+}
+
