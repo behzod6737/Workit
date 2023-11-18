@@ -109,7 +109,7 @@ img {
   font-weight: bold;
   line-height: 32px;
   letter-spacing: -0.18px;
-  transition: all  ease-in-out var(--transition-timing);
+  transition: all ease-in-out var(--transition-timing);
 }
 
 .button:hover {
