@@ -1,33 +1,46 @@
 /* FONT FACE */
 
 @font-face {
-	font-family: 'Manrope';
-	src: url('../fonts/') format('woff2'),
-		url('../fonts/Manrope-Regular.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
+  font-family: "Manrope";
+  src: url("../fonts/") format("woff2"),
+    url("../fonts/Manrope-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'Fraunces 144pt';
-	src: url('../fonts/Fraunces144pt-SemiBold.woff2') format('woff2'),
-		url('../fonts/Fraunces144pt-SemiBold.woff') format('woff');
-	font-weight: 600;
-	font-style: normal;
-	font-display: swap;
+  font-family: "Fraunces 144pt";
+  src: url("../fonts/Fraunces144pt-SemiBold.woff2") format("woff2"),
+    url("../fonts/Fraunces144pt-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/') format('woff2'),
+        url('../fonts/Manrope-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 /* CUSTOM PROPS */
-:root{
-	/* colors */
-	--dark-purple: #24053E;
-	--Eucaplyptus: #44FFA1;
-	--davys-grery: #584D62;
-	--ghost-white: #FCF8FF;
-	/* fonts  */
-	--heading-font-family : 'Fraunces 144pt','Times New Roman','serif';
-	--body-font-family : 'Manrope','Arial','sans-serif'
+:root {
+  /* colors */
+  --dark-purple: #24053e;
+  --Eucaplyptus: #44ffa1;
+  --davys-grery: #584d62;
+  --ghost-white: #fcf8ff;
+  /* fonts  */
+  --heading-font-family: "Fraunces 144pt", "Times New Roman", "serif";
+  --body-font-family: "Manrope", "Arial", "sans-serif";
+  /* transition */
+  --transition-timing: 300ms;
 }
 
 /* GLOBAL */
@@ -81,4 +94,118 @@ img {
   margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
+}
+
+/* BUTTON */
+
+.button {
+  display: inline-block;
+  width: fit-content;
+  padding: 13px 32px 16px;
+  background-color: var(--Eucaplyptus);
+  border: 2px solid transparent;
+  color: var(--dark-purple);
+  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: -0.18px;
+  transition: all  ease-in-out var(--transition-timing);
+}
+
+.button:hover {
+	color: var(--Eucaplyptus);
+	background-color: var(--dark-purple);
+	border: 2px solid var(--Eucaplyptus);
+
+}
+.button:active {
+	opacity: 0.5;
+}
+
+/* SITE HEADAER HERO WRAPPER  */
+.site-header-hero-wrapper {
+  padding-top: 56px;
+  background-color: var(--dark-purple);
+}
+
+/* SITE HEADER */
+.site-header {
+  padding-bottom: 58px;
+}
+.site-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* site logo */
+
+.site-logo {
+  display: block;
+  text-decoration: none;
+}
+.logo-img {
+  display: block;
+  width: 97px;
+  height: 25px;
+}
+
+.logo-img:hover {
+  opacity: 0.8;
+}
+
+/* underline link */
+.underline-link {
+  display: inline-block;
+  border-bottom: 3px solid var(--Eucaplyptus);
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: -0.18px;
+  transition: color  ease var(--transition-timing), 
+  opacity ease var(--transition-timing);
+}
+
+.underline-link:hover {
+  color: var(--Eucaplyptus);
+}
+.underline-link:active {
+  opacity: 0.8;
+}
+
+/* SITE HERO */
+.site-hero {
+}
+.site-hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero__heading {
+  max-width: 635px;
+  margin-top: 0;
+  margin-bottom: 36px;
+  color: white;
+  font-family: var(--heading-font-family );
+  text-align: center;
+  font-size: 80px;
+  line-height: 90px;
+}
+
+.hero__span{
+	border-bottom: 3px solid var(--Eucaplyptus);
+	
+}
+
+.hero__button {
+  margin-bottom: 50px;
+}
+.hero__img {
+	display: block;
+	width: 767;
+	height: 441;
 }
